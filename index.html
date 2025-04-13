@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Clínica MS - Melquisedeque Salicio</title>
@@ -48,12 +47,6 @@
       align-items: center;
     }
 
-    nav ul {
-      display: flex;
-      list-style: none;
-      gap: 30px;
-    }
-
     nav ul li a {
       text-decoration: none;
       color: #fff;
@@ -70,25 +63,46 @@
       text-decoration: none;
     }
 
-    .hero-content h1 {
-      font-size: 3rem;
+    .hero {
+      position: relative;
+      height: 80vh;
+      background: url('Dr.melquisedeque (1920 x 500 px).png') no-repeat center center/cover;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .hero-text {
       color: white;
+      text-align: center;
+      z-index: 1;
+    }
+
+    .hero-text h1 {
+      font-size: 3rem;
       margin-bottom: 20px;
     }
 
-    .hero-content p {
+    .hero-text p {
       font-size: 1.5rem;
-      color: white;
     }
 
-    .btn-primary {
-      padding: 12px 25px;
+    .hero-btn {
       background-color: #ff7a00;
       color: white;
-      font-size: 1rem;
-      border-radius: 5px;
-      text-decoration: none;
+      padding: 12px 24px;
+      border: none;
+      border-radius: 4px;
       font-weight: bold;
+      text-decoration: none;
+      margin-top: 20px;
+      display: inline-block;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+
+    .hero-btn:hover {
+      background-color: #e96d00;
+      transform: scale(1.05);
     }
 
     .tratamentos {
@@ -124,7 +138,6 @@
       max-height: 250px;
       object-fit: cover;
       border-radius: 8px;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     }
 
     .sobre {
@@ -153,7 +166,6 @@
       max-width: 450px;
       border-radius: 10px;
       box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-      position: left;
     }
 
     .sobre-texto {
@@ -187,7 +199,6 @@
       padding: 20px;
       border-radius: 8px;
       box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-      text-align: center;
     }
 
     .depoimento-item p {
@@ -208,47 +219,11 @@
       text-align: center;
     }
 
-    footer h2 {
-      margin-bottom: 20px;
-    }
-
     footer iframe {
       border: 0;
-      width: 900px;
-      height: 500px;
-    }
-
-    .hero {
-      position: relative;
-      height: 80vh;
-      background: url('Dr.melquisedeque (1920 x 500 px).png') no-repeat center center/cover;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .hero-text {
-      color: white;
-      text-align: center;
-      z-index: 1;
-    }
-
-    .hero-btn {
-      background-color: #ff7a00;
-      color: white;
-      padding: 12px 24px;
-      border: none;
-      border-radius: 4px;
-      font-weight: bold;
-      text-decoration: none;
-      margin-top: 20px;
-      display: inline-block;
-      transition: background-color 0.3s ease, transform 0.3s ease;
-    }
-
-    .hero-btn:hover {
-      background-color: #e96d00;
-      transform: scale(1.05);
+      width: 100%;
+      height: 400px;
+      max-width: 900px;
     }
 
     .dropdown {
@@ -260,13 +235,12 @@
       top: calc(100% + 10px);
       left: 50%;
       transform: translateX(-50%);
-      background-color: transparent;
+      background-color: #111;
       list-style: none;
       padding: 10px 0;
       margin: 0;
       min-width: 200px;
       z-index: 1000;
-
       max-height: 0;
       opacity: 0;
       overflow: hidden;
@@ -292,7 +266,7 @@
     }
 
     @media screen and (max-width: 768px) {
-      nav ul {
+      nav ul.menu-principal {
         display: none;
         flex-direction: column;
         align-items: center;
@@ -303,11 +277,11 @@
         left: 0;
         background-color: #111;
         padding: 20px 0;
-        transition: transform 0.3s ease-in-out;
         transform: translateX(-100%);
+        transition: transform 0.3s ease-in-out;
       }
 
-      nav ul.active {
+      nav ul.menu-principal.active {
         transform: translateX(0);
       }
 
@@ -316,6 +290,12 @@
       }
     }
   </style>
+  <script>
+    function toggleMenu() {
+      const menu = document.querySelector("ul.menu-principal");
+      menu.classList.toggle("active");
+    }
+  </script>
 </head>
 <body>
   <header>
@@ -328,7 +308,7 @@
       <ul class="menu-principal">
         <li><a href="index.html">Início</a></li>
         <li class="dropdown">
-          <a href="#">Tratamentos▼</a>
+          <a href="#">Tratamentos ▼</a>
           <ul class="dropdown-menu">
             <li><a href="implante.html">Implante Dentário</a></li>
             <li><a href="clareamento.html">Clareamento Dental</a></li>
@@ -348,34 +328,33 @@
   </header>
 
   <section class="hero">
-    <div class="overlay"></div>
     <div class="hero-text">
       <h1>Transforme seu Sorriso com Excelência!</h1>
       <p>Atendimento estético profissional e humanizado</p>
-      <a href="#tratamentos" class="btn-agendar hero-btn">Conheça nossos tratamentos</a>
+      <a href="#tratamentos" class="hero-btn">Conheça nossos tratamentos</a>
     </div>
   </section>
 
   <section class="tratamentos" id="tratamentos">
-    <h2>Pricipais Tratamentos</h2>
+    <h2>Principais Tratamentos</h2>
     <div class="tratamentos-lista">
       <div class="tratamento-item">
         <img src="Implante melq.png" alt="Implantes Dentários">
         <h3>Implantes Dentários</h3>
         <p>Recupere seu sorriso com segurança e conforto.</p>
-        <a href="implante.html" class="btn-agendar hero-btn">Saiba Mais</a>
+        <a href="implante.html" class="hero-btn">Saiba Mais</a>
       </div>
       <div class="tratamento-item">
         <img src="clareamento-dental- teste.jpg" alt="Clareamento Dental">
         <h3>Clareamento Dental</h3>
         <p>Dentes branquinhos como a neve.</p>
-        <a href="clareamento.html" class="btn-agendar hero-btn">Saiba Mais</a>
+        <a href="clareamento.html" class="hero-btn">Saiba Mais</a>
       </div>
       <div class="tratamento-item">
-        <img src="Aparelho.jpeg" alt="Aparelho Ortodontico">
+        <img src="Aparelho.jpeg" alt="Aparelho Ortodôntico">
         <h3>Ortodontia</h3>
         <p>Estética dental com resultados naturais e duradouros.</p>
-        <a href="ortodontia.html" class="btn-agendar hero-btn">Saiba Mais</a>
+        <a href="ortodontia.html" class="hero-btn">Saiba Mais</a>
       </div>
     </div>
   </section>
@@ -409,5 +388,7 @@
   <footer>
     <h2>Onde estamos</h2>
     <p>Venha nos visitar ou agende uma avaliação pelo WhatsApp!</p>
-    <div>
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3731.260923374589!2d-48.917776624
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3731.260923374589!2d-48.917776624999996!3d-20.817935685148995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94bbbe3214776f7f%3A0x2c32f3ea0ae87044!2sR.%20S%C3%A3o%20Jo%C3%A3o%2C%203311%20-%20Boa%20Vista%2C%20Fernand%C3%B3polis%20-%20SP%2C%2015650-000!5e0!3m2!1spt-BR!2sbr!4v1713037253214!5m2!1spt-BR!2sbr" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </footer>
+</body>
+</html>
