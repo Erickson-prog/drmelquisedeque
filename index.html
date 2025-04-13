@@ -288,6 +288,33 @@
       .menu-hamburguer {
         display: flex;
       }
+      @media screen and (max-width: 768px) {
+  header {
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .btn-whatsapp {
+    margin-top: 10px;
+    order: 3;
+    width: 100%;
+    text-align: center;
+  }
+
+  .logo {
+    order: 1;
+    flex: 1 1 100%;
+    text-align: center;
+  }
+
+  .menu-hamburguer {
+    order: 2;
+  }
+
+  nav {
+    order: 4;
+    width: 100%;
+  }
     }
   </style>
   <script>
@@ -298,34 +325,34 @@
   </script>
 </head>
 <body>
-  <header>
-    <div class="logo">
-      <a href="index.html">
-        <img src="logo5-removebg-preview.png" alt="Logo Clínica MS" />
-      </a>
-    </div>
-    <nav>
-      <ul class="menu-principal">
-        <li><a href="index.html">Início</a></li>
-        <li class="dropdown">
-          <a href="#">Tratamentos ▼</a>
-          <ul class="dropdown-menu">
-            <li><a href="implante.html">Implante Dentário</a></li>
-            <li><a href="clareamento.html">Clareamento Dental</a></li>
-            <li><a href="ortodontia.html">Ortodontia</a></li>
-          </ul>
-        </li>
-        <li><a href="#">Estrutura</a></li>
-        <li><a href="#">Equipe</a></li>
-      </ul>
-    </nav>
-    <a href="https://wa.me/5517996016578?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o%20odontol%C3%B3gica%21" target="_blank" class="btn-whatsapp">AGENDAR</a>
-    <div class="menu-hamburguer" onclick="toggleMenu()">
-      <div class="hamburguer-bar"></div>
-      <div class="hamburguer-bar"></div>
-      <div class="hamburguer-bar"></div>
-    </div>
-  </header>
+ <header>
+  <div class="logo">
+    <a href="index.html">
+      <img src="logo5-removebg-preview.png" alt="Logo Clínica MS" />
+    </a>
+  </div>
+  <nav>
+    <ul class="menu-principal">
+      <li><a href="index.html">Início</a></li>
+      <li class="dropdown">
+        <a href="#">Tratamentos ▼</a>
+        <ul class="dropdown-menu">
+          <li><a href="implante.html">Implante Dentário</a></li>
+          <li><a href="clareamento.html">Clareamento Dental</a></li>
+          <li><a href="ortodontia.html">Ortodontia</a></li>
+        </ul>
+      </li>
+      <li><a href="#">Estrutura</a></li>
+      <li><a href="#">Equipe</a></li>
+    </ul>
+  </nav>
+  <a href="https://wa.me/5517996016578?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o%20odontol%C3%B3gica%21" target="_blank" class="btn-whatsapp">AGENDAR</a>
+  <div class="menu-hamburguer" onclick="toggleMenu()">
+    <div class="hamburguer-bar"></div>
+    <div class="hamburguer-bar"></div>
+    <div class="hamburguer-bar"></div>
+  </div>
+</header>
 
   <section class="hero">
     <div class="hero-text">
