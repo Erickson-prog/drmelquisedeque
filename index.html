@@ -19,7 +19,7 @@
 
     header {
       background-color: #111;
-      padding: 15px 20px;
+      padding: 20px 40px;
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -27,11 +27,10 @@
       top: 0;
       width: 100%;
       z-index: 10;
-      flex-wrap: wrap;
     }
 
     .logo img {
-      height: 60px;
+      height: 100px;
     }
 
     nav {
@@ -39,13 +38,18 @@
       display: flex;
       justify-content: center;
     }
-
     .menu-principal {
       display: flex;
       list-style: none;
-      gap: 20px;
-      flex-wrap: wrap;
+      gap: 30px;
       justify-content: center;
+      align-items: center;
+    }
+
+    nav ul {
+      display: flex;
+      list-style: none;
+      gap: 30px;
     }
 
     nav ul li a {
@@ -57,116 +61,62 @@
     .btn-whatsapp {
       background-color: #ff7a00;
       color: white;
-      padding: 10px 15px;
+      padding: 10px 20px;
       border: none;
       border-radius: 4px;
       font-weight: bold;
       text-decoration: none;
-      font-size: 0.9rem;
     }
 
-    .hero {
-      position: relative;
-      height: 70vh;
-      background: url('Dr.melquisedeque (1920 x 500 px).png') no-repeat center center/cover;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-top: 90px;
-      text-align: center;
-    }
-
-    .hero-text {
+    .hero-content h1 {
+      font-size: 3rem;
       color: white;
-      z-index: 1;
+      margin-bottom: 20px;
     }
 
-    .hero-text h1 {
-      font-size: 2.2rem;
+    .hero-content p {
+      font-size: 1.5rem;
+      color: white;
     }
 
-    .hero-text p {
-      font-size: 1.2rem;
-    }
-
-    .hero-btn {
+    .btn-primary {
+      padding: 12px 25px;
       background-color: #ff7a00;
       color: white;
-      padding: 12px 24px;
-      border: none;
-      border-radius: 4px;
-      font-weight: bold;
+      font-size: 1rem;
+      border-radius: 5px;
       text-decoration: none;
-      margin-top: 20px;
-      display: inline-block;
-      transition: background-color 0.3s ease, transform 0.3s ease;
-    }
-
-    .hero-btn:hover {
-      background-color: #e96d00;
-      transform: scale(1.05);
-    }
-
-    .dropdown {
-      position: relative;
-    }
-
-    .dropdown-menu {
-      position: absolute;
-      top: calc(100% + 10px);
-      left: 50%;
-      transform: translateX(-50%);
-      background-color: transparent;
-      list-style: none;
-      padding: 10px 0;
-      margin: 0;
-      min-width: 200px;
-      z-index: 1000;
-      max-height: 0;
-      opacity: 0;
-      overflow: hidden;
-      transition: max-height 0.3s ease, opacity 0.3s ease;
-    }
-
-    .dropdown:hover .dropdown-menu {
-      max-height: 500px;
-      opacity: 1;
-    }
-
-    .tratamentos, .sobre, .depoimentos {
-      padding: 60px 20px;
-      text-align: center;
+      font-weight: bold;
     }
 
     .tratamentos {
+      padding: 60px 20px;
       background-color: #f6f0d6;
+      text-align: center;
     }
 
-    .sobre {
-      background-color: #fff9ea;
+    .tratamentos h2 {
+      font-size: 2.5rem;
+      margin-bottom: 40px;
     }
 
-    .depoimentos {
-      background-color: #f6f0d6;
-    }
-
-    .tratamentos-lista, .sobre-conteudo, .depoimentos-lista {
+    .tratamentos-lista {
       display: flex;
       gap: 30px;
       justify-content: center;
       flex-wrap: wrap;
     }
 
-    .tratamento-item, .depoimento-item {
+    .tratamento-item {
       background-color: #fff;
       padding: 20px;
       border-radius: 8px;
       box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-      width: 90%;
-      max-width: 280px;
+      width: 250px;
+      text-align: center;
     }
 
-    .tratamento-item img, .sobre-imagem img {
+    .tratamento-item img {
       width: 100%;
       height: auto;
       max-height: 250px;
@@ -175,21 +125,78 @@
       box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     }
 
-    .sobre-imagem {
-      max-width: 100%;
+    .sobre {
+      padding: 60px 20px;
+      background-color: #fff9ea;
+      text-align: center;
+    }
+
+    .sobre h2 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+    }
+
+    .sobre-conteudo {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 40px;
+      max-width: 1200px;
+      margin: 0 auto;
+      flex-wrap: wrap;
+    }
+
+    .sobre-imagem img {
+      width: 100%;
+      max-width: 450px;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+      position: left;
     }
 
     .sobre-texto {
       max-width: 700px;
-      font-size: 1.1rem;
+      font-size: 1.3rem;
       color: #444;
-      line-height: 1.6;
+      line-height: 1.8;
+    }
+
+    .depoimentos {
+      padding: 60px 20px;
+      background-color: #f6f0d6;
+      text-align: center;
+    }
+
+    .depoimentos h2 {
+      font-size: 2.5rem;
+      margin-bottom: 40px;
+    }
+
+    .depoimentos-lista {
+      display: flex;
+      gap: 40px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .depoimento-item {
+      width: 300px;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      text-align: center;
     }
 
     .depoimento-item p {
-      font-size: 1.1rem;
+      font-size: 1.2rem;
       color: #444;
-      margin-bottom: 15px;
+      margin-bottom: 20px;
+    }
+
+    .depoimento-item h4 {
+      font-size: 1.1rem;
+      color: #333;
     }
 
     footer {
@@ -199,46 +206,79 @@
       text-align: center;
     }
 
+    footer h2 {
+      margin-bottom: 20px;
+    }
+
     footer iframe {
-      width: 100%;
-      height: 300px;
       border: 0;
-      max-width: 900px;
+      width: 900px;
+      height: 500px;
     }
+    .hero {
+  position: relative;
+  height: 80vh;
+  background: url('Dr.melquisedeque (1920 x 500 px).png') no-repeat center center/cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
-    @media (max-width: 768px) {
-      .hero-text h1 {
-        font-size: 1.8rem;
-      }
+.hero-text {
+  color: white;
+  text-align: center;
+  z-index: 1;
+}
+.hero-btn {
+  background-color: #ff7a00;
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 4px;
+  font-weight: bold;
+  text-decoration: none;
+  margin-top: 20px;
+  display: inline-block;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
 
-      .hero-text p {
-        font-size: 1rem;
-      }
+.hero-btn:hover {
+  background-color: #e96d00;
+  transform: scale(1.05);
+}
 
-      .menu-principal {
-        flex-direction: column;
-        gap: 10px;
-      }
+.dropdown {
+  position: relative;
+}
+.dropdown-menu {
+  position: absolute;
+  top: calc(100% + 10px);
+  left: 50%;
+  transform:translatex(-50%);
+  background-color: transparent;
+  list-style: none;
+  padding: 10px 0;
+  margin: 0;
+  min-width: 200px;
+  z-index: 1000;
 
-      .btn-whatsapp {
-        margin-top: 10px;
-      }
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-opacity 0.3s ease;
+}
 
-      .sobre-conteudo {
-        flex-direction: column;
-        align-items: center;
-      }
-
-      .tratamento-item, .depoimento-item {
-        max-width: 100%;
-      }
-    }
+.dropdown:hover .dropdown-menu {
+  max-height: 500px; /* altura suficiente pra mostrar todos os itens */
+  opacity: 1;
+}
   </style>
 </head>
 <body>
   <header>
     <div class="logo">
-      <a href="index.html"><img src="logo5-removebg-preview.png" alt="Logo Clínica MS" /></a>
+      <a href="index.html">
+      <img src="logo5-removebg-preview.png" alt="Logo Clínica MS" />
     </div>
     <nav>
       <ul class="menu-principal">
@@ -252,42 +292,47 @@
           </ul>
         </li>
         <li><a href="#">Estrutura</a></li>
+    
+        </li>
+
         <li><a href="#">Equipe</a></li>
-      </ul>
+      </ul>
     </nav>
-    <a href="https://wa.me/5517996016578?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o%20odontol%C3%B3gica%21" target="_blank" class="btn-whatsapp">AGENDAR</a>
+    <a href="https://wa.me/5517996016578?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o%20odontol%C3%B3gica%21" target="_blank"class="btn-whatsapp">AGENDAR</a>
   </header>
 
   <section class="hero">
+    <div class="overlay"></div>
     <div class="hero-text">
       <h1>Transforme seu Sorriso com Excelência!</h1>
       <p>Atendimento estético profissional e humanizado</p>
-      <a href="#tratamentos" class="hero-btn">Conheça nossos tratamentos</a>
+      <a href="#tratamentos" class="btn-agendar hero-btn">Conheça nossos tratamentos</a>
     </div>
   </section>
-
   <section class="tratamentos" id="tratamentos">
-    <h2>Principais Tratamentos</h2>
+    <h2>Pricipais Tratamentos</h2>
     <div class="tratamentos-lista">
       <div class="tratamento-item">
         <img src="Implante melq.png" alt="Implantes Dentários">
         <h3>Implantes Dentários</h3>
         <p>Recupere seu sorriso com segurança e conforto.</p>
-        <a href="implante.html" class="hero-btn">Saiba Mais</a>
+        <a href="implante.html" class="btn-agendar hero-btn">Saiba Mais</a> <!-- Botão Saiba Mais -->
+
       </div>
       <div class="tratamento-item">
         <img src="clareamento-dental- teste.jpg" alt="Clareamento Dental">
         <h3>Clareamento Dental</h3>
         <p>Dentes branquinhos como a neve.</p>
-        <a href="clareamento.html" class="hero-btn">Saiba Mais</a>
+        <a href="clareamento.html" class="btn-agendar hero-btn">Saiba Mais</a> <!-- Botão Saiba Mais -->
+
       </div>
       <div class="tratamento-item">
         <img src="Aparelho.jpeg" alt="Aparelho Ortodontico">
         <h3>Ortodontia</h3>
         <p>Estética dental com resultados naturais e duradouros.</p>
-        <a href="ortodontia.html" class="hero-btn">Saiba Mais</a>
+        <a href="ortodontia.html" class="btn-agendar hero-btn">Saiba Mais</a> <!-- Botão Saiba Mais -->
+
       </div>
-    </div>
   </section>
 
   <section class="sobre" id="sobre">
@@ -319,7 +364,8 @@
   <footer>
     <h2>Onde estamos</h2>
     <p>Venha nos visitar ou agende uma avaliação pelo WhatsApp!</p>
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3731.260923374589!2d-48.91777662497685!3d-20.740215880837905!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94bc6e671eb5389b%3A0x1890f3338ba235ba!2zQXNzb2NpYcOnw6NvIGRlIFNvY29ycm9zIE3DunR1b3MgZGUgT2zDrW1waWE!5e0!3m2!1spt-BR!2sbr!4v1744557993195!5m2!1spt-BR!2sbr" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    <div>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3731.260923374589!2d-48.91777662497685!3d-20.740215880837905!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94bc6e671eb5389b%3A0x1890f3338ba235ba!2zQXNzb2NpYcOnw6NvIGRlIFNvY29ycm9zIE3DunR1b3MgZGUgT2zDrW1waWE!5e0!3m2!1spt-BR!2sbr!4v1744557993195!5m2!1spt-BR!2sbr" width="900" height="500"     </div>
   </footer>
 </body>
 </html>
