@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Implante Dentário - Clínica MS</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #fff;
+      color: #333;
+    }
+
+    header {
+      background-color: #111;
+      padding: 20px 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 10;
+    }
+
+    .logo img {
+      height: 100px;
+    }
+
+    nav {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+    }
+    .menu-principal {
+      display: flex;
+      list-style: none;
+      gap: 30px;
+      justify-content: center;
+      align-items: center;
+    }
+
+    nav ul {
+      display: flex;
+      list-style: none;
+      gap: 30px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #fff;
+      font-size: 1rem;
+    }
+
+    .btn-whatsapp {
+      background-color: #ff7a00;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 4px;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    .hero {
+      height: 100vh;
+      background: url('Dr.melquisedeque (1920 x 500 px).png') no-repeat center center/cover;
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .hero-content h1 {
+      font-size: 3rem;
+      color: white;
+      margin-bottom: 20px;
+    }
+
+    .hero-content p {
+      font-size: 1.5rem;
+      color: white;
+    }
+
+    .btn-primary {
+      padding: 12px 25px;
+      background-color: #ff7a00;
+      color: white;
+      font-size: 1rem;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background-color: #fff;
+      color: #333;
+    }
+
+    .banner-ortodontia {
+      position: relative;
+      height: 80vh;
+      background: url('banner ortodontia.png') no-repeat center center/cover;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .banner-implante-text {
+        color: white;
+        text-align: center;
+        z-index: 1;
+    }
+    
+
+    .banner-implante::after {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+
+    .banner-text {
+      position: absolute;
+      top: 50%; left: 50%;
+      transform: translate(-50%, -50%);
+      color: white;
+      text-align: center;
+      z-index: 1;
+    }
+
+    .conteudo-tratamento {
+      max-width: 800px;
+      margin: 60px auto;
+      padding: 0 20px;
+    }
+
+    .conteudo-tratamento h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+
+    .conteudo-tratamento p {
+      line-height: 1.8;
+      font-size: 1.1rem;
+    }
+  .btn-agendar {
+    background-color: #ff7a00;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    text-decoration: none;
+  }
+.dropdown {
+  position: relative;
+}
+.dropdown-menu {
+  position: absolute;
+  top: calc(100% + 10px);
+  left: 50%;
+  transform:translatex(-50%);
+  background-color: transparent;
+  list-style: none;
+  padding: 10px 0;
+  margin: 0;
+  min-width: 200px;
+  z-index: 1000;
+
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-opacity 0.3s ease;
+}
+
+.dropdown:hover .dropdown-menu {
+  max-height: 500px; /* altura suficiente pra mostrar todos os itens */
+  opacity: 1;
+}
+
+</style>
+  </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="index.html">
+            <img src="logo5-removebg-preview.png" alt="Logo Clínica MS" />
+          </div>
+          <nav>
+            <ul class="menu-principal">
+              <li><a href="index.html">Início</a></li>
+              <li class="dropdown">
+                <a href="#">Tratamentos▼</a>
+                <ul class="dropdown-menu">
+                  <li><a href="implante.html">Implante Dentário</a></li>
+                  <li><a href="clareamento.html">Clareamento Dental</a></li>
+                  <li><a href="ortodontia.html">Ortodontia</a></li>
+                </ul>
+              </li>
+              <li><a href="#">Estrutura</a></li>
+          
+              </li>
+          
+              <li><a href="#">Equipe</a></li>
+            </ul>
+          </nav>
+          <a href="https://wa.me/5517996016578?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o%20odontol%C3%B3gica%21" target="_blank"class="btn-whatsapp">AGENDAR</a>
+        </header>
+
+  <section class="banner-ortodontia">
+    <div class="banner-text">
+    </div>
+  </section>
+
+  <section class="conteudo-tratamento">
+    <h2>O que é Ortodontia?</h2>
+    <p>Essa especialidade é a responsável pela correção da posição dos ossos maxilares e dos dentes posicionados de maneira incorreta. Quando a arcada dentária está torta ou apresenta problemas de encaixe, pode provocar consequências sérias na estrutura da face.<br>
+    <h2>Benefícios</h2>
+    <p>• Melhora a aparência do sorriso<br>
+    • Prevenção de cáries e mal hálito<br>
+    • Aumenta a autoestima<br>
+    • Melhora na fala e mastigação</p>
+
+    <h2>Agende sua avaliação</h2>
+    <p>Estamos prontos para transformar seu sorriso. Para agendar uma avaliação.</a>
+        <div style="text-align: left; margin-top: 30px;">
+            <a href="https://wa.me/5517996016578?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o%20odontol%C3%B3gica%21"  class="btn-agendar" target="_blank" style="display: incline-block;">AGENDAR</a>
+            </div>
+  </section>
+</body>
+</html>
