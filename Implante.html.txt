@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Implante Dentário - Clínica MS</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background-color: #fff;
+      color: #333;
+    }
+
+    .banner-implante {
+      background: url('banner-implante.jpg') no-repeat center center/cover;
+      height: 60vh;
+      position: relative;
+    }
+
+    .banner-implante::after {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+
+    .banner-text {
+      position: absolute;
+      top: 50%; left: 50%;
+      transform: translate(-50%, -50%);
+      color: white;
+      text-align: center;
+      z-index: 1;
+    }
+
+    .conteudo-tratamento {
+      max-width: 800px;
+      margin: 60px auto;
+      padding: 0 20px;
+    }
+
+    .conteudo-tratamento h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+
+    .conteudo-tratamento p {
+      line-height: 1.8;
+      font-size: 1.1rem;
+    }
+  </style>
+</head>
+<body>
+  <section class="banner-implante">
+    <div class="banner-text">
+      <h1>Implante Dentário</h1>
+    </div>
+  </section>
+
+  <section class="conteudo-tratamento">
+    <h2>O que é o Implante Dentário?</h2>
+    <p>O implante dentário é uma solução moderna e eficaz para a reposição de dentes perdidos. Com um pino de titânio fixado ao osso, o tratamento proporciona segurança, estética e função mastigatória aprimorada.</p>
+
+    <h2>Benefícios</h2>
+    <p>• Sorriso natural e harmônico<br>
+    • Durabilidade e resistência<br>
+    • Alta taxa de sucesso<br>
+    • Melhora na fala e mastigação</p>
+
+    <h2>Agende sua avaliação</h2>
+    <p>Estamos prontos para transformar seu sorriso. Clique <a href="https://wa.me/5517996016578?text=Olá%2C%20gostaria%20de%20fazer%20implante%20dentário!">aqui</a> para falar conosco no WhatsApp.</p>
+  </section>
+</body>
+</html>
